@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://ec2-52-31-177-160.eu-west-1.compute.amazonaws.com/" />
+<title>New_Coupon_Add</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New_Coupon_Add</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/open-eshop-2.0.1/oc-panel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@class=&quot;title-txt active&quot;][text()=&quot;eShop&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='collapseOne']//a[@title='Coupons']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='collapseOne']//a[@title='Coupons']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='content']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//input[@id='name']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='name']</td>
+	<td>NewCouponAdd_STA</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='number_coupons']</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@name='valid_date']</td>
+	<td>2016-05-31</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//button[@name='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@class=&quot;alert alert-success&quot;]/h4</td>
+	<td>Success</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table//tr/td[text()=&quot;NewCouponAdd_STA&quot;]/../td[4]</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table//tr/td[text()=&quot;NewCouponAdd_STA&quot;]/../td[5]</td>
+	<td>31-05-16</td>
+</tr>
+</tbody></table>
+</body>
+</html>
